@@ -1,0 +1,10 @@
+{
+  "name": "front-core-study",
+  "packageManager": "yarn@4.1.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "card": "yarn workspace m-card"
+  }
+}
