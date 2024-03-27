@@ -1,33 +1,36 @@
-import { useState } from 'react'
 import './App.css'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Text } from '@components/common/Text'
+import { Button } from '@components/common/Button'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Button>Hello</Button>
+      <Button weak>Hello</Button>
+      <Button color="success" size="medium">
+        Hello
+      </Button>
+      <Button color="success" weak size="medium">
+        Hello
+      </Button>
+      <Button color="error" size="large">
+        Hello
+      </Button>
+      <Button color="error" weak size="large">
+        Hello
+      </Button>
+      <Text typography="t1" color="red">
+        hello
+      </Text>
+      <Text typography="t2" color="blue">
+        hello
+      </Text>
+      <Text typography="t3" color="white">
+        hello
+      </Text>
+      <Text typography="t5" color="green">
+        hello
+      </Text>
     </>
   )
 }
