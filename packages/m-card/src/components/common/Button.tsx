@@ -1,14 +1,9 @@
 import { ReactNode } from 'react'
-import * as style from './Button.css'
+import { button as style, ButtonCSSPropType } from './Button.css'
 
-interface Props {
+type Props = {
   children?: ReactNode
-  color?: 'primary' | 'success' | 'error'
-  size?: 'small' | 'medium' | 'large'
-  weak?: boolean
-  full?: boolean
-  disabled?: boolean
-}
+} & ButtonCSSPropType
 
 export const Button = ({
   children,
@@ -19,7 +14,7 @@ export const Button = ({
   weak = false,
 }: Props) => {
   return (
-    <button className={style.button({ color, size, disabled, full, weak })}>
+    <button className={style({ color, size, disabled, full, weak })}>
       {children}
     </button>
   )
