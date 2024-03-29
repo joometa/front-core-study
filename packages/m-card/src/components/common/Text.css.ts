@@ -3,7 +3,7 @@ import { colors } from '@styles/color.css'
 import { typo } from '@styles/typo.css'
 
 export const text = recipe({
-  base: [],
+  base: [{}],
   variants: {
     color: colors,
     typo: typo,

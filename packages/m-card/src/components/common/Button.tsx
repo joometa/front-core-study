@@ -1,9 +1,11 @@
-import { ReactNode } from 'react'
+import { HTMLAttributes, ReactNode } from 'react'
 import { button as style, ButtonCSSPropType } from './Button.css'
 
-type Props = {
+interface Button extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactNode
-} & ButtonCSSPropType
+}
+
+type Props = Button & ButtonCSSPropType
 
 export const Button = ({
   children,
@@ -12,9 +14,10 @@ export const Button = ({
   disabled = false,
   full = false,
   weak = false,
+  ...props
 }: Props) => {
   return (
-    <button className={style({ color, size, disabled, full, weak })}>
+    <button {...props} className={style({ color, size, disabled, full, weak })}>
       {children}
     </button>
   )

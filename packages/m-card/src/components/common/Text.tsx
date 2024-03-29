@@ -1,10 +1,10 @@
 import { colors } from '@styles/color.css'
 import { typo } from '@styles/typo.css'
 // import {  } from '@vanilla-extract/css'
-import * as style from './Text.css'
-import React, { ReactNode, CSSProperties } from 'react'
+import * as s from './Text.css'
+import React, { ReactNode, CSSProperties, HTMLAttributes } from 'react'
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLSpanElement> {
   color?: keyof typeof colors
   typography?: keyof typeof typo
   display?: CSSProperties['display']
@@ -22,15 +22,17 @@ export const Text = ({
   fontWeight,
   bold,
   children,
+  style,
 }: Props) => {
   return (
     <span
-      className={style.text({ typo: typography })}
+      className={s.text({ typo: typography })}
       style={{
         display: display,
         textAlign,
         fontWeight: `${bold ? 'bold' : fontWeight}`,
         color: colors[color],
+        ...style,
       }}
     >
       {children}

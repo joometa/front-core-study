@@ -8,5 +8,4 @@ globalLayer({ parent: 'framework' }, 'typography')
 
 export const vars = createGlobalTheme(':root', {
   ...colors,
-  fontSize: '62.5%',
 })

@@ -7,6 +7,7 @@ export const button = recipe({
       cursor: 'pointer',
       fontWeight: 'bold',
       borderRadius: '0.6rem',
+      border: 'none',
     },
   ],
   variants: {
@@ -39,7 +40,7 @@ export const button = recipe({
       true: {
         display: 'block',
         width: '100%',
-        borderRadius: '0',
+        // borderRadius: '0',
       },
     },
     weak: {
@@ -83,4 +84,4 @@ export const button = recipe({
   ],
 })
 
-export type ButtonVariants = RecipeVariants<typeof button>
+export type ButtonCSSPropType = RecipeVariants<typeof button>
